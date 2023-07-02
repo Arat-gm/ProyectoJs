@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos.css">
+  <title>Simulador de Envío y Cálculo de Impuestos</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Calculadora de envíos nacionales e internacionales</h1>
+  </div>
+<div class="bloque1">
+    <form>
+      <div class="form-group">
+        <label for="tipo-envio">Tipo de Envío:</label>
+        <select class="form-select" id="tipo-envio">
+          <option value="nacional">Nacional</option>
+          <option value="internacional">Internacional</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="puntoPartida">Punto de Partida:</label>
+        <select class="form-select" id="punto-partida">
+          <option value="Argentina">Buenos Aires(Argentina)</option>
+          <option value="Argentina">Córdoba(Argentina)</option>
+          <option value="Argentina">Santa Fe Aires(Argentina)</option>
+          <option value="Argentina">Tierra del fuego(Argentina)</option>
+        </select>
+      </div>
+
+
+      <div class="form-group">
+        <label for="destino-pais">Destino:</label>
+        <select class="form-select" id="destino-pais">
+          <option value="Escoger" id="Escoger">Seleccione una ciudad</option>
+          <option value="Argentina" id="Argentina">Buenos Aires(Argentina)</option>
+          <option value="Argentina" id="Argentina">Córdoba(Argentina)</option>
+          <option value="Argentina" id="Argentina">Santa Fe Aires(Argentina)</option>
+          <option value="Argentina" id="Argentina">Tierra del fuego(Argentina)</option>
+          <option value="america" id="america">Sao Paulo(Brasil)</option>
+          <option value="america" id="america">Nueva York(USA)</option>
+          <option value="america" id="america">Ciudad de México (México)</option>
+          <option value="america" id="america">Bogotá (Colombia)</option>
+          <option value="america" id="america">Toronto (Canadá)</option>
+          <option value="america" id="america">Santiago (Chile)</option>
+          <option value="america" id="america">Lima (Perú)</option>
+          <option value="america" id="america">Caracas (Venezuela)</option>
+          <option value="europa" id="europa">Londres (Reino Unido)</option>
+          <option value="europa" id="europa">París (Francia)</option>
+          <option value="europa" id="europa">Roma (Italia)</option>
+          <option value="europa" id="europa">Madrid (España)</option>
+          <option value="europa" id="europa">Berlin (Alemania)</option>
+          <option value="europa" id="europa">Amsterdam (Países Bajos)</option>
+          <option value="asia" id="asia">Tokio (Japón)</option>
+          <option value="asia" id="asia">Tel Aviv (Israel)</option>
+          <option value="asia" id="asia">Delhi (India)</option>
+          <option value="asia" id="asia">Busan (China)</option>
+          <option value="asia" id="asia">Guangzhou (China)</option>
+          <option value="asia" id="asia">Qingdao (China)</option>
+          <option value="asia" id="asia">Seúl (Corea del Sur)</option>
+          <option value="asia" id="asia">Bangkok (Tailandia)</option>
+          <option value="asia" id="asia">Yakarta (Indonesia)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="clasificacion">Clasificación:</label>
+        <select class="form-select" id="clasificacion">
+          <option value="accesorios-moda">Accesorios de Moda</option>
+          <option value="textiles">Textiles</option>
+          <option value="marroquineria">Marroquinería</option>
+          <option value="accesorios-tecnologia">Accesorios de Tecnología</option>
+          <option value="otros">Valijas y otros bienes personales</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="contiene-telas">¿Contiene Telas?</label>
+        <select class="form-select" id="tipo-tejido">          
+          <option value="no">No</option>
+          <option value="punto">Punto</option>
+          <option value="plano">Plano</option>
+        </select>
+      </div>
+
+      <div class="form-text">Indique si el tejido es de punto o plano en caso de ser necesario</div>
+      
+
+      <button type="button" class="btn btn-primary" id="calcular-tiempo-btn">Calcular Tiempo de Envío</button>
+      <div id="resultadoTiempo"></div>
+    </form>
+  </div>
+
+
+  <div class="bloque2">
+    <form>
+      <div class="form-group">
+        <label for="cantidad-productos">Cantidad de Productos:</label>
+        <input type="number" class="form-control" id="cantidad-productos">
+        <div id="guia" class="form-text">Recuerde, a partir de 70 unidades tiene recargo y se permite un máximo de 100 unidades</div>
+      </div>
+
+      <div class="form-group">
+        <label for="peso-total">Peso Total (gr):</label>
+        <input type="number" class="form-control" id="peso-total">
+        <div class="form-text">El peso en gramos superior a 5000 tiene recargo</div>
+      </div>
+
+      <div class="form-group">
+        <label for="valor-declarado">Valor Declarado $</label>
+        <input type="number" class="form-control" id="valor-declarado">
+      </div>
+
+
+      <button type="button" class="btn btn-primary" id="calcular-impuestos-btn">Calcular Impuestos</button>
+
+      <p id="resultadoImpuestos"></p>
+    </form>
+  </div>
+
+  <script src="calculadora.js"></script>
+</body>
+
+</html>

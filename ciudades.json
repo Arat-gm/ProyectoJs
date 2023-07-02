@@ -1,0 +1,18 @@
+{
+  "america": {
+    "dias": 3,
+    "valorAgregado": 1000
+  },
+  "Argentina": {
+    "dias": 3,
+    "valorAgregado": 200
+  },
+  "europa": {
+    "dias": 8,
+    "valorAgregado": 2000
+  },
+  "asia": {
+    "dias": 10,
+    "valorAgregado": 3000
+  }
+}
